@@ -44,7 +44,7 @@ img {
     padding-block: 2rem;
 }
 
-form {
+.form {
     display: flex;
     gap: 2rem;
     padding-bottom: 2rem;
@@ -127,7 +127,7 @@ h1 {
 
 
 @media screen and (max-width: 600px) {
-    form {
+    .form {
         padding-bottom: 4rem;
     }
 
