@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --clr-primary-purple: hsl(259, 100%, 65%);
+    --clr-primary-red: hsl(0, 100%, 67%);
+    --clr-white-200: #f0f0f0;
+    --clr-white-400: hsl(0, 0%, 100%);
+    --clr-gray-200: hsl(0, 0%, 86%);
+    --clr-gray-400: hsl(0, 1%, 44%);
+    --clr-black: hsl(0, 0%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    background-color: var(--clr-gray-200);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.card-calc {
+    background: var(--clr-white-400);
+    border-radius: 1rem 1rem 10rem 1rem;
+    max-width: 700px;
+    margin-inline: 1rem;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+    padding-block: 2rem;
+}
+
+form {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--clr-gray-200);
+    position: relative;
+}
+
+.wrap {
+    width: 23%;
+}
+
+label {
+    font-size: 0.8rem;
+    color: var(--clr-gray-400);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type=text] {
+    border: 1px solid var(--clr-gray-200);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    outline: none;
+    width: 100%;
+}
+
+input[type=text]:hover {
+    cursor: pointer;
+}
+
+input[type=text]:focus {
+    border: 1px solid var(--clr-primary-purple);
+}
+
+.wrap p {
+    color: var(--clr-primary-red);
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+button {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-primary-purple);
+    padding: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--clr-black);
+}
+
+.result {
+    margin-top: 1.5rem;
+}
+
+span {
+    color: var(--clr-primary-purple);
+    font-weight: 800;
+    font-style: italic;
+}
+
+.result p {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 4rem;
+}
+
+/* for improve accessibility only */
+h1 {
+    font-size: 0.1rem;
+    color: var(--clr-gray-200);
+}
+
+
+@media screen and (max-width: 600px) {
+    form {
+        padding-bottom: 4rem;
+    }
+
+    .wrap {
+        width: 100%;
+    }
+
+    input[type=text] {
+        font-size: 1rem;
+    }
+
+    button {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .result {
+        margin-top: 3rem;
+    }
+
+    .wrap p {
+        font-size: 0.5rem;
+    }
+
+    .result > p {
+        font-size: 3rem;
+    }
+}
